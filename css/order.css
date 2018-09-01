@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document 默認 超小屏幕（手機，小於768px）*/
+@media ( max-width : 768px) {
+	* {
+		font-family: 微軟雅黑;
+		font-size: 1rem;
+		text-align: center;
+		vertical-align: middle;
+		margin: 0rem;
+		padding: 0rem;
+	}
+	body {
+		
+	}
+	#main {
+		width: 96%;
+		margin: 0 auto;
+		background: #ffffff;
+	}
+	#orders {
+		height: auto;
+		margin-top: 0.5rem;
+		background: #f1f1f1;
+		box-shadow: 0.5rem 0.5rem 0.25rem #9c9c9c;
+		border-radius: 1rem;
+		padding: 0rem;
+	}
+	.order_cn {
+		font-size: 1.2rem;
+		border-bottom: 0.125rem solid #666;
+		padding-bottom: 0.5rem;
+	}
+	#order_form {
+		
+	}
+	#datepicker, #timepicker {
+		margin: 1.5rem;
+	}
+	#order_peoples {
+		margin: 1.5rem;
+	}
+	#order_suits {
+		margin: 1.5rem;
+	}
+	#order_payments {
+		margin: 1.5rem;
+	}
+	#order_remarks {
+		margin: 1.5rem;
+	}
+	#order_date {
+		border-radius: 0.5rem;
+		width: 12.5rem;
+	}
+	#pickdate, #picktime {
+		background: #ffffff;
+		width: 12rem;
+		height: 2rem;
+	}
+	#order_people {
+		width: 6rem;
+		height: 2rem;
+	}
+	#order_suit {
+		width: 12rem;
+		height: 2rem;
+		font-size: 0.9rem;
+	}
+	.order_payment {
+		margin-left: 1.2rem;
+	}
+	.suit_description {
+		color: green;
+		width: 18rem;
+		font-size: 0.85rem;
+		display: none;
+	}
+	#order_remark {
+		width: 12rem;
+		height: 4.5rem;
+		resize: none;
+		text-align: left;
+	}
+	#order_submit {
+		margin-bottom: 1.25rem;
+		margin-left: 10rem;
+	}
+	#footer {
+		position: fixed;
+		bottom: 0;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+/* 小屏幕（平板，大於等於768px） */
+@media ( min-width : 768px) {
+}
+
+/* 中等屏幕（桌面顯示器，大於等於992px） */
+@media ( min-width : 992px) {
+}
+
+/* 大屏幕（大桌面顯示器，大於等於116rem） */
+@media ( min-width : 116rem) {
+}

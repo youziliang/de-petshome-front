@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/activity.css"/>
+
+    <title>宠友圈</title>
+</head>
+
+<body>
+<div id="main" class="container-fluid">
+    <div id="activity_details">
+        <span id="activity_detail_cn">活 动 详 情</span>
+        <div id="activity_detail">
+            <div class="row">
+                <span class="col-4 activity_key">活動主題</span>
+                <span id="activity_theme" class="col-8 activity_value"></span>
+            </div>
+            <hr>
+            <div class="row">
+                <span class="col-4 activity_key">活動時間</span>
+                <span id="activity_date" class="col-8 activity_value"></span>
+            </div>
+            <hr>
+            <div class="row">
+                <span class="col-4 activity_key">活動地址</span>
+                <span id="activity_address" class="col-8 activity_value"></span>
+            </div>
+            <hr>
+            <div>
+                <p id="activity_desc" class="activity_value"></p>
+                <img id="activity_img" class="activity_value" src="">
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div id="myfooter"></div>
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/activity.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        // 加载footer
+        $("#myfooter").load("./footer.html");
+    });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        let urlParams = decodeURI(window.location.search);
+        let keyAndValue = urlParams.split("&");
+        $("#activity_theme").html(keyAndValue[0].split("=")[1]);
+        $("#activity_date").html(keyAndValue[1].split("=")[1]);
+        $("#activity_address").html(keyAndValue[2].split("=")[1]);
+        $("#activity_desc").html(keyAndValue[3].split("=")[1]);
+        $("#activity_img").attr("src", keyAndValue[4].split("=")[1]);
+    });
+</script>
+</body>
+</html>

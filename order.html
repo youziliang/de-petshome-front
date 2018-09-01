@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./datedropper/datedropper.css"/>
+    <link rel="stylesheet" href="./timedropper/timedropper.css"/>
+    <link rel="stylesheet" href="./jrange/jquery.range.css"/>
+    <link rel="stylesheet" href="./css/order.css"/>
+
+    <title>宠友圈</title>
+</head>
+
+<body>
+<div id="main" class="container-fluid">
+    <div id="orders">
+        <span class="order_cn">預 約 卡</span>
+        <form id="order_form">
+            <div id="datepicker" class="row">
+                <span>日&nbsp;&nbsp;期&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input name="pickdate" id="pickdate" class="form-control" type="text" data-large-mode="false"
+                       data-lang="zh" data-translate-mode="false" data-id="datedropper-0" data-format="Y-m-d l"
+                       data-min-year="2018" readonly="readonly">
+            </div>
+            <div id="timepicker" class="row">
+                <span>時&nbsp;&nbsp;間&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input name="picktime" id="picktime" class="form-control" type="text" class="input td-input"
+                       readonly="readonly">
+            </div>
+            <div id="order_peoples" class="row">
+                <span>人&nbsp;&nbsp;數&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input name="order_people" id="order_people" type="hidden" class="slider-input form-control"/>
+            </div>
+            <div id="order_suits" class="row">
+                <span>套&nbsp;&nbsp;餐&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <select onchange="onSuitChange(this.value)" name="order_suit" id="order_suit"
+                        class="form-control span1"></select>
+            </div>
+            <div id="order_payments" class="row">
+                <span>支&nbsp;&nbsp;付&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <div class="radio">
+                    <label class="radio-inline order_payment">
+                        <input name="order_payment" type="radio" value="0" checked="checked">到店付
+                    </label>
+                    <label class="radio-inline order_payment">
+                        <input name="order_payment" type="radio" value="1">余额付
+                    </label>
+                </div>
+            </div>
+            <div id="order_remarks" class="row">
+                <span>留&nbsp;&nbsp;言&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <textarea name="order_remark" id="order_remark" class="form-control" rows="5"></textarea>
+            </div>
+            <button id="order_submit" type="button" class="btn btn-outline-primary" onclick="reservate()">確認預約</button>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div id="myfooter"></div>
+
+<script src="./js/jquery-3.3.1.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./datedropper/datedropper.js"></script>
+<script src="./timedropper/timedropper.js"></script>
+<script src="./jrange/jquery.range.js"></script>
+<script src="./jrange/order.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        // 加载footer
+        $("#myfooter").load("./footer.html");
+        //checkBeforeReservation();
+        loadDateChoice();
+        loadCountChoice();
+    });
+</script>
+</body>
+</html>

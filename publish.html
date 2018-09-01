@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./datedropper/datedropper.css"/>
+    <link rel="stylesheet" href="./timedropper/timedropper.css"/>
+    <link rel="stylesheet" href="./css/publish.css"/>
+
+    <title>宠友圈</title>
+</head>
+
+<body>
+<div id="main" class="container-fluid">
+    <div id="activity_details">
+        <span id="activity_detail_cn">活 动 详 情</span>
+        <form id="publish_form" enctype="multipart/form-data">
+            <div id="activity_detail">
+                <div class="row form-group">
+                    <span class="col-4 activity_key">活動主題</span>
+                    <input name="activity_theme" id="activity_theme" class="form-control col-8 activity_value"
+                           type="text">
+                </div>
+                <hr>
+                <div id="datepicker" class="row">
+                    <span class="col-4 activity_key">活動日期</span>
+                    <input name="pickdate" id="pickdate" class="form-control col-8 activity_value" type="text"
+                           data-large-mode="false" data-lang="zh" data-translate-mode="false" data-id="datedropper-0"
+                           data-format="Y-m-d" data-min-year="2018" readonly="readonly">
+                </div>
+                <hr>
+                <div id="timepicker" class="row">
+                    <span class="col-4 activity_key">活動時間</span>
+                    <input name="picktime" id="picktime" class="form-control col-8 activity_value" type="text"
+                           class="input td-input" readonly="readonly">
+                </div>
+                <hr>
+                <div class="row form-group">
+                    <span class="col-4 activity_key">活動地址</span>
+                    <input name="activity_address" id="activity_address" class="form-control col-8 activity_value"
+                           type="text">
+                </div>
+                <hr>
+                <div class="form-group">
+                    <textarea name="activity_detail" class="form-control" rows="5"></textarea>
+                    <img id="publish_img" class="activity_value" src="">
+                </div>
+                <div class="form-group">
+                    <input type="file" id="img_file" name="img_file" accept="image/*" smultiple="multiple">
+                </div>
+            </div>
+            <button id="activity_submit" type="button" class="btn btn-outline-primary" onclick="publish()">发布活动</button>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div id="myfooter"></div>
+
+<script src="./js/jquery-3.3.1.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./datedropper/datedropper.js"></script>
+<script src="./timedropper/timedropper.js"></script>
+<script src="./js/publish.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        // 加载footer
+        $("#myfooter").load("./footer.html");
+        loadDateChoice();
+    });
+</script>
+</body>
+</html>

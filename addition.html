@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/addition.css"/>
+
+    <title>宠友圈</title>
+</head>
+<h5 id="tips">
+    为 了 更 好 地 服 务<br>請 在 预 约 前 完 善 您 的 资 料
+</h5>
+<div id="main" class="container-fluid">
+    <div id="logins" class="container">
+        <form id="addition_form">
+            <div class="form-group">
+                <input type="text" id="name" name="name" class="form-control name" placeholder="請輸入您的真實姓名">
+            </div>
+            <div class="form-group radio">
+                <label class="radio-inline sex">
+                    <input name="sex" type="radio" value="1">先生
+                </label>
+                <label class="radio-inline sex">
+                    <input name="sex" type="radio" value="2" checked="checked">女士
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="tel" name="tel" class="form-control tel" placeholder="請輸入手機號">
+            </div>
+            <div class="form-group">
+                <input type="text" id="retel" name="retel" class="form-control tel" placeholder="請再次輸入手機號">
+            </div>
+            <button id="addition_submit" type="button" class="btn btn-outline-primary" onclick="addMore()">提交</button>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div id="myfooter"></div>
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/addition.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        // 加载footer
+        $("#myfooter").load("./footer.html");
+        showAdditions();
+    });
+</script>
+</body>
+</html>

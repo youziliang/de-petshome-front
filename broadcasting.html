@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/footer.css"/>
+
+    <title>宠友圈</title>
+</head>
+<body>
+<div id="main" class="container-fluid">
+    <div id="broadcastings">
+        <span id="broadcasting_cn">發 佈 通 知</span>
+        <form id="broadcasting_form">
+            <div class="form-group">
+                <textarea id="notice" name="notice" class="form-control" rows="5"></textarea>
+            </div>
+            <button id="broadcasting_submit" type="button" class="btn btn-outline-primary" onclick="publish()">發佈通知
+            </button>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div id="myfooter"></div>
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/broadcasting.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        // 加载footer
+        $("#myfooter").load("./footer.html");
+    });
+</script>
+</body>
+</html>

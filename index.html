@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+
+    <title>宠友圈</title>
+</head>
+
+<body>
+<div id="main" class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div id="searchbar">搜&nbsp;&nbsp;索&nbsp;&nbsp;欄</div>
+        </div>
+        <div id="carousels" class="col-12">
+            <div id="banners" class="carousel slide" data-ride="carousel">
+                <!-- 指示符 -->
+                <ul class="carousel-indicators">
+                    <li data-target="#banners" data-slide-to="0" class="active"></li>
+                    <li data-target="#banners" data-slide-to="1"></li>
+                    <li data-target="#banners" data-slide-to="2"></li>
+                </ul>
+                <!-- 轮播图片 -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="carousel_img" src="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="carousel_img" src="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="carousel_img" src="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <marquee id="broadcasting" behavior="scroll" direction="left"
+                     scrollamount="3" scrolldelay="10" loop="-1"></marquee>
+        </div>
+        <div class="col-12">
+            <div id="activities">
+                <span id="activity_cn">最 新 活 動</span>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div id="myfooter"></div>
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/index.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        // 加载footer
+        $("#myfooter").load("./footer.html");
+        loadHomeInfo();
+    });
+</script>
+</body>
+</html>

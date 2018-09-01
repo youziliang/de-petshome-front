@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document 默認 超小屏幕（手機，小於768px）*/
+@media ( max-width : 768px) {
+	* {
+		font-family: 微軟雅黑;
+		font-size: 1rem;
+		text-align: center;
+		vertical-align: middle;
+		margin: 0rem;
+		padding: 0rem;
+	}
+	body {
+		
+	}
+	#main {
+		width: 96%;
+		margin: 0 auto;
+		background: #ffffff;
+	}
+	#user {
+		margin-top: 1rem;
+		background: #f1f1f1;
+		height: 8rem;
+		text-align: center;
+		border-radius: 0.2rem;
+	}
+	#head_img {
+		width: 5rem;
+		height: 5rem;
+		border-radius: 5rem;
+		margin-top: 0.6rem;
+	}
+	#nickname {
+		font-size: 1.2rem;
+	}
+	.publish {
+		font-size: 1.25rem;
+		margin: 1.5rem;
+		display: none;
+	}
+	#detail, #account {
+		text-align: left;
+	}
+	#level {
+		height: 1.25rem;
+	}
+	#level_bar {
+		width: 70%;
+		font-size: 0.75rem;
+	}
+	#my_order {
+		margin-top: 1.75rem;
+		background: #f1f1f1;
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+		box-shadow: 0.5rem 0.5rem 0.25rem #9c9c9c;
+		border-radius: 1rem;
+	}
+	.order_key {
+		text-align: right;
+	}
+	.order_value {
+		text-align: left;
+	}
+	.order_cancel {
+		margin-left: 3.2rem;
+	}
+	.confirm_button {
+		margin-left: 4rem;
+	}
+	.confirm_prompt {
+		color: #00c300;
+		margin-bottom: 0rem;
+		margin-left: 2.5rem;
+	}
+	#footer {
+		position: fixed;
+		bottom: 0;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+/* 小屏幕（平板，大於等於768px） */
+@media ( min-width : 768px) {
+}
+
+/* 中等屏幕（桌面顯示器，大於等於992px） */
+@media ( min-width : 992px) {
+}
+
+/* 大屏幕（大桌面顯示器，大於等於116rem） */
+@media ( min-width : 116rem) {
+}

@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document 默認 超小屏幕（手機，小於768px）*/
+@media ( max-width : 768px) {
+	* {
+		font-family: 微軟雅黑;
+		font-size: 1rem;
+		text-align: center;
+		vertical-align: middle;
+		margin: 0rem;
+		padding: 0rem;
+	}
+	body {
+		
+	}
+	#tips {
+		margin-top: 6rem;
+		color: #00c300;
+	}
+	#main {
+		margin: 0 auto;
+		margin-top: 2rem;
+	}
+	#logins {
+		padding-top: 2rem;
+	}
+	.name {
+		height: 2rem;
+	}
+	.sex {
+		margin: 1.5rem;
+	}
+	.tel {
+		height: 2rem;
+	}
+	#addition_submit {
+		height: 2rem;
+		float: right;
+	}
+}
+
+/* 小屏幕（平板，大於等於768px） */
+@media ( min-width : 768px) {
+}
+
+/* 中等屏幕（桌面顯示器，大於等於992px） */
+@media ( min-width : 992px) {
+}
+
+/* 大屏幕（大桌面顯示器，大於等於116rem） */
+@media ( min-width : 116rem) {
+}

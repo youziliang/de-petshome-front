@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document 默認 超小屏幕（手機，小於768px）*/
+@media ( max-width : 768px) {
+	* {
+		font-family: 微軟雅黑;
+		font-size: 1rem;
+		text-align: center;
+		vertical-align: middle;
+		margin: 0rem;
+		padding: 0rem;
+	}
+	body {
+		
+	}
+	#main {
+		width: 96%;
+		margin: 0 auto;
+		background: #ffffff;
+	}
+	#activity_details {
+		margin-top: 0.75rem;
+	}
+	#activity_detail_cn {
+		font-size: 1.2rem;
+		border-bottom: 0.125rem solid #666;
+		padding-bottom: 0.5rem;
+	}
+	#activity_detail {
+		margin-top: 1.75rem;
+		width: 100%;
+		height: auto;
+		vertical-align: middle;
+		text-align: center;
+		position: relative;
+	}
+	.activity_key {
+		text-align: right;
+	}
+	.activity_value {
+		text-align: left;
+	}
+	#activity_desc {
+		text-indent: 2rem;
+		margin-left: 2rem;
+		margin-right: 0.75rem;
+	}
+	#activity_img {
+		width: 18.5rem;
+		height: 18.5rem;
+	}
+}
+
+/* 小屏幕（平板，大於等於768px） */
+@media ( min-width : 768px) {
+}
+
+/* 中等屏幕（桌面顯示器，大於等於992px） */
+@media ( min-width : 992px) {
+}
+
+/* 大屏幕（大桌面顯示器，大於等於116rem） */
+@media ( min-width : 116rem) {
+}
