@@ -4,7 +4,7 @@ let checkBeforeReservation = function () {
         url: "http://www.whatu1.com/dp-petshome-web/order/checkBeforeReservation",
         type: "POST",
         dataType: "json",
-        async: true,
+        async: false,
         cache: false,
         timeout: 50000,
         data: {},
@@ -15,7 +15,7 @@ let checkBeforeReservation = function () {
                 switch (data.status) {
                     case 0:
                         // 检查成功，无需作为
-                        loadDateChoice();
+                        loadDateChoice("pickdate", "picktime");
                         loadCountChoice();
                         break;
                     case 1:
@@ -38,9 +38,9 @@ let checkBeforeReservation = function () {
     });
 }
 
-let loadDateChoice = function () {
-    $("#pickdate").dateDropper();
-    $("#picktime").timeDropper({
+let loadDateChoice = function (dateId, timeId) {
+    $("#" + dateId).dateDropper();
+    $("#" + timeId).timeDropper({
         format: "HH:mm A",
     });
 }
@@ -118,9 +118,9 @@ let onSuitChange = function (id) {
     $("#" + id).show();
 }
 
-let reservate = function () {
+let reservate = function (form) {
     // 提交表單
-    let formData = new FormData($("#order_form")[0]);
+    let formData = new FormData($(form).parent()[0]);
     $.ajax({
         url: "http://www.whatu1.com/dp-petshome-web/order/reservate",
         type: "POST",

@@ -5,8 +5,8 @@ let loadDateChoice = function () {
     });
 }
 
-let publish = function () {
-    let formData = new FormData($("#publish_form")[0]);
+let publish = function (form) {
+    let formData = new FormData($(form).parent()[0]);
     $.ajax({
         url: "http://www.whatu1.com/dp-petshome-web/publish/publishActivity",
         type: "POST",

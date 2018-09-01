@@ -56,7 +56,7 @@
                 <span>留&nbsp;&nbsp;言&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <textarea name="order_remark" id="order_remark" class="form-control" rows="5"></textarea>
             </div>
-            <button id="order_submit" type="button" class="btn btn-outline-primary" onclick="reservate()">確認預約</button>
+            <button id="order_submit" type="button" class="btn btn-outline-primary" onclick="reservate(this)">確認預約</button>
         </form>
     </div>
 </div>
@@ -71,15 +71,13 @@
 <script src="./datedropper/datedropper.js"></script>
 <script src="./timedropper/timedropper.js"></script>
 <script src="./jrange/jquery.range.js"></script>
-<script src="./jrange/order.js"></script>
+<script src="./js/order.js"></script>
 
 <script type="text/javascript">
     $(function () {
         // 加载footer
         $("#myfooter").load("./footer.html");
-        //checkBeforeReservation();
-        loadDateChoice();
-        loadCountChoice();
+        checkBeforeReservation();
     });
 </script>
 </body>
